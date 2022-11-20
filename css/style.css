@@ -1,0 +1,341 @@
+footer {
+  grid-area: footer;
+  background: rgb(13, 71, 161);
+  text-align: center;
+  padding-top: 5vh;
+  width: 100%;
+}
+
+.redes,
+.politicas,
+.derechosreservados {
+  color: rgb(247, 249, 249);
+  padding: 5px;
+  font-family: cursive;
+}
+
+header {
+  grid-area: header;
+  background: rgb(13, 71, 161);
+  padding: 0 20px;
+  color: rgb(247, 249, 249);
+  height: fit-content;
+  width: 100%;
+  align-items: center;
+}
+
+header form {
+  /*margin-left: 60px;*/
+  align-items: center;
+}
+
+.navbar-brand {
+  color: rgb(247, 249, 249);
+  font-size: x-large;
+  align-content: center;
+}
+.navbar-brand:hover {
+  animation: agitar 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.navbar-nav {
+  color: rgb(247, 249, 249);
+  cursor: pointer;
+}
+
+/*ANIMACION NOOBER*/
+@keyframes agitar {
+  0% {
+    transform: translate(-1px, -2px) rotate(0deg);
+  }
+  20% {
+    transform: translate(3px, 2px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  90% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  font-family: cursive;
+  background: rgb(247, 249, 249);
+  background-image: url(../imageneswep/videojuegos1.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*PLANTILLAS*/
+#plantillahome {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas: "header header" "noticias ofertas" "footer footer";
+  grid-template-columns: 1fr 1fr;
+}
+
+#plantillasesion {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  column-gap: 20vh;
+  grid-template-areas: "header header" "imagensesion datos" "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#plantillacuenta {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas: "header" "registro" "footer";
+  grid-template-columns: 1fr;
+}
+
+#plantillanosotros {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas: "header header header" "fotos historia historia" "fotos historiados historiados" "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#plantillaaccesorios {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas: "header" "accesorios1" "accesorios2" "footer";
+  grid-template-columns: 1fr;
+}
+
+.container-fluid {
+  text-align: center;
+  align-content: center;
+}
+
+.form-control {
+  box-shadow: none;
+  size: adjust 30px;
+}
+
+.d-block {
+  border-radius: 10px;
+}
+
+.carouselslide {
+  width: 100%;
+  padding-top: 45px;
+  font-family: cursive;
+}
+
+.btn {
+  background: rgb(247, 249, 249);
+  font-family: cursive;
+  color: rgb(13, 71, 161);
+  border-bottom: 5px;
+  border: 2px solid rgb(23, 9, 61);
+  transition: all 0.4s;
+}
+.btn:hover {
+  border: 2px solid rgb(247, 249, 249);
+  background: rgb(13, 71, 161);
+}
+
+/*PSEUDO-CLASES*/
+div ul:link {
+  color: rgb(247, 249, 249);
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid rgb(247, 249, 249);
+}
+
+/*GRILLAS*/
+#noticias, #ofertas {
+  grid-area: noticias;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+#ofertas {
+  grid-area: ofertas;
+}
+
+#datos, #registro {
+  grid-area: datos;
+  display: flex;
+  padding: 50px;
+  border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid rgb(247, 249, 249);
+  color: rgb(247, 249, 249);
+}
+
+#imagensesion, #fotos {
+  grid-area: imagensesion;
+  background-image: url(../imageneswep/areyouplayer.jpg);
+  display: flex;
+  color: rgb(247, 249, 249);
+  padding: 0px 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 85vh;
+}
+
+#registro {
+  grid-area: registro;
+}
+
+#fotos {
+  grid-area: fotos;
+  background-image: url(../imageneswep/top-de-accesorios-gaming.jpg);
+}
+
+#historia, #historiados {
+  grid-area: historia;
+  color: rgb(247, 249, 249);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0px 10px 10px;
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid rgb(247, 249, 249);
+}
+
+#historiados {
+  grid-area: historiados;
+}
+
+#accesorios1, #accesorios2 {
+  grid-area: accesorios1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  padding: 10px, 2;
+  border: 2px solid rgb(247, 249, 249);
+  border-radius: 10px;
+}
+
+#accesorios2 {
+  grid-area: accesorios2;
+}
+
+/*ACCESORIOS*/
+h4 {
+  color: rgb(247, 249, 249);
+  margin: 15px 0px;
+}
+
+p {
+  color: rgb(247, 249, 249);
+  margin: 10px;
+  padding: 10px 30px;
+}
+
+.agregar-a-carrito {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(13, 71, 161);
+  background-color: rgb(247, 249, 249);
+  padding: 10px 30px;
+  border: 3px solid rgb(247, 249, 249);
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+}
+.agregar-a-carrito:hover {
+  background: rgb(13, 71, 161);
+  color: rgb(247, 249, 249);
+}
+
+.joys {
+  width: 100vh, 10;
+}
+
+/*REGISTRO*/
+.form-control {
+  align-self: baseline;
+}
+
+.form-check-input {
+  background: rgb(247, 249, 249);
+}
+
+/* RESPONSIVE */
+/* Smartphones (horizontal) ----------- */
+@media (max-width: 760px) {
+  body {
+    font-size: small;
+  }
+  #plantillahome {
+    grid-template-areas: "header" "noticias" "ofertas" "footer";
+    grid-template-columns: 1fr;
+  }
+  #plantillanosotros {
+    grid-template-areas: "header" "fotos" "historia" "historiados" "footer";
+    grid-template-columns: 1fr;
+  }
+  #fotos {
+    height: 45vh;
+    padding: 0 50px;
+    margin: 5px;
+  }
+  #plantillasesion {
+    grid-template-areas: "header" "imagensesion" "datos" "footer";
+    grid-template-columns: 1fr;
+  }
+  #imagensesion, #fotos {
+    height: 45vh;
+    width: 100%;
+  }
+  #accesorios1, #accesorios2 {
+    flex-direction: column;
+    display: block;
+    height: fit-content;
+  }
+  #registro {
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 5vh;
+  }
+}
+@media (max-width: 1300px) and (min-width: 760px) {
+  body {
+    font-size: medium;
+  }
+  #registro {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
